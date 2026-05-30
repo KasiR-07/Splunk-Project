@@ -1,0 +1,6 @@
+INFO user=john status=success response_time=3
+ERROR user=alice status=failed response_time=15
+ERROR user=bob status=failed response_time=25
+INFO user=david status=success response_time=2
+INFO user=john status=success response_time=5
+ERROR user=alice status=failed response_time=20
