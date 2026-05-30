@@ -1,0 +1,20 @@
+#Average Response Time
+
+index=app_logs
+| stats avg(response_time) as Avg_Response_Time
+
+#Error Count by User
+
+index=app_logs status=failed
+| stats count by user
+
+#Success Vs Failed Request
+
+index=app_logs
+| stats count by status
+
+#Top Slow Users
+
+index=app_logs
+| stats avg(response_time) as AvgTime by user
+| sort - AvgTime
